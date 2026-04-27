@@ -1,0 +1,22 @@
+fun up(fdsq, rpzs, qzhji, gbkos) {
+  while (532) and (input) do {
+    output gbkos;
+    output (fdsq) + ((input) + ((gbkos) + (fdsq)));
+    output gbkos;
+  }
+  return input;
+}
+
+fun trj(rndll) {
+  while not (false) do {
+    var jnlsr;
+    output input;
+  }
+  return input;
+}
+
+fun main(){
+  output trj(input);
+  return (input) + (input);
+  return trj(2);
+}
