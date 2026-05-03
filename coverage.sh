@@ -8,7 +8,7 @@ BIN=""                  # path to the binary to analyze, e.g. build/while
 SRC_DIR=""              # path to sorce files to analyze
 EXCLUDE="/_deps/"       # regex for files to be excluded from coverage report
 OUT_DIR="coverage-out"  # output directory for coverage reports
-EXTERNAL_DIR=""         # directory conatining external .while test files (if mode=external or both)
+EXTERNAL_DIR="starsmith_tests"         # directory conatining external .while test files (if mode=external or both)
  
 # path to LLMV tools
 LLVM_COV="${LLVM_COV:-llvm-cov-18}"
