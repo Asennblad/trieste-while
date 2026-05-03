@@ -5,6 +5,17 @@ project(while VERSION 0.1.0 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+# Bygg med: cmake -DCODE_COVERAGE=ON -DCMAKE_CXX_COMPILER=clang++ ..
+option(CODE_COVERAGE "Enable coverage instrumentation" OFF)
+if(CODE_COVERAGE)
+  message(STATUS "Code coverage enabled")
+  set(COVERAGE_FLAGS "-fprofile-instr-generate -fcoverage-mapping -O0 -g")
+  set(CMAKE_CXX_FLAGS        "${CMAKE_CXX_FLAGS}        ${COVERAGE_FLAGS}")
+  set(CMAKE_C_FLAGS          "${CMAKE_C_FLAGS}          ${COVERAGE_FLAGS}")
+  set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${COVERAGE_FLAGS}")
+endif()
+
 set(TRIESTE_BUILD_SAMPLES OFF)
 
 include(FetchContent)
